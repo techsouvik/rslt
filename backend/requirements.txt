@@ -1,0 +1,12 @@
+fastapi>=0.111.0
+uvicorn>=0.30.1
+redis>=5.0.6
+agno>=2.6.9
+httpx>=0.27.0
+pydantic>=2.9.0
+python-multipart>=0.0.9
+playwright>=1.44.0
+motor>=3.4.0
+pymongo>=4.7.2
+python-dotenv>=1.0.1
+google-genai>=2.9.0

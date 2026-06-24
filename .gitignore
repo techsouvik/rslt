@@ -1,0 +1,44 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Environment variables (Sensitive)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Large Binaries / MongoDB
+mongodb-macos-aarch64-*/
+mongodb-macos-arm64-*.tgz
+*.tgz
+*.zip
+*.tar.gz
+
+# Generated assets/outputs
+backend/app/static/ugc_video_*.mp4
+backend/app/static/rendered_ugc_*.mp4
+temp_ugc/
+backend/music_results.txt
+music_results.txt
