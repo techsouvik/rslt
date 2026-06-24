@@ -10,16 +10,16 @@ UGC Studio AI is divided into a lightweight, highly-visual web client and a deco
 
 ```mermaid
 graph TD
-    User([User Client]) -->|1. Prompts / Chats| FastAPI[FastAPI Server]
-    FastAPI -->|2. Multi-Agent Team Orchestration| Agno[Agno Multi-Agent System]
-    Agno -->|3. Draft Concept & Fetch Assets| Pexels[Pexels API]
-    Agno -->|3. Fetch Memes / GIFs| Giphy[Giphy / Tenor APIs]
-    Agno -->|4. Push Render Job| Redis[(Redis Broker)]
-    Redis -->|5. Consume Job| Worker[Celery Worker / Background Process]
-    Worker -->|6. FFmpeg Compiling / Overlays| FinalVideo[(Generated UGC Video)]
-    Worker -->|7. Persist Metadata| MongoDB[(MongoDB)]
-    Worker -->|8. Upload Video Assets| UploadThing[UploadThing Cloud Storage]
-    FastAPI -.->|9. Real-time Progress (SSE)| User
+    User(["User Client"]) -->|1. Prompts / Chats| FastAPI["FastAPI Server"]
+    FastAPI -->|2. Multi-Agent Team Orchestration| Agno["Agno Multi-Agent System"]
+    Agno -->|3. Draft Concept & Fetch Assets| Pexels["Pexels API"]
+    Agno -->|3. Fetch Memes / GIFs| Giphy["Giphy / Tenor APIs"]
+    Agno -->|4. Push Render Job| Redis[("Redis Broker")]
+    Redis -->|5. Consume Job| Worker["Celery Worker / Background Process"]
+    Worker -->|6. FFmpeg Compiling / Overlays| FinalVideo[("Generated UGC Video")]
+    Worker -->|7. Persist Metadata| MongoDB[("MongoDB")]
+    Worker -->|8. Upload Video Assets| UploadThing["UploadThing Cloud Storage"]
+    FastAPI -.->|9. Real-time Progress - SSE| User
 ```
 
 ### 1. Frontend Client (`frontend/app`)
